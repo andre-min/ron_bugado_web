@@ -1,0 +1,27 @@
+.
+├── load_env.py
+├── log
+│   ├── log.html
+│   ├── output.xml
+│   └── report.html
+├── __pycache__
+│   ├── load_env.cpython-312.pyc
+│   └── mylib.cpython-312.pyc
+├── requeriments.txt
+├── resources
+│   ├── keyword.resource
+│   ├── libs
+│   └── variables.resource
+├── ron_bugado_web.txt
+├── tests
+│   └── login.robot
+└── venv
+    ├── bin
+    ├── include
+    ├── lib
+    ├── lib64 -> lib
+    └── pyvenv.cfg
+
+11 directories, 12 files
+
+#tree -L 2 > ron_bugado_web.txt
