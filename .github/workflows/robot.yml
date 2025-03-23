@@ -45,6 +45,7 @@ jobs:
     permissions:
       contents: read
       pages: write
+      id-token: write
     environment:
       name: github-pages
       url: https://andre-min.github.io/ron_bugado_web/report.html
