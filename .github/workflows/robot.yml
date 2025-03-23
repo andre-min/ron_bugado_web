@@ -47,8 +47,8 @@ jobs:
       pages: write
     environment:
       name: github-pages
-      url: https://andre-min.github.io/ron_bugado_web/report.html
-
+      url: https://github.com/andre-min/ron_bugado_web/report.html
+           
     steps:
       - name: Setup Pages
         uses: actions/configure-pages@v4
