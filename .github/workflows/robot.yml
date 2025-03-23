@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-    - name: Clonar arquivos do repositorio
+    - name: Clonar arquivos do repositório
       uses: actions/checkout@v4
 
     - name: Configurar Python
@@ -16,14 +16,16 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Instalação das Dependencias
+    - name: Instalar dependências
       run: |
-        python  -m venv venv
+        python -m venv venv
         source venv/bin/activate
+        pip install --upgrade pip  # Garantir que o pip esteja atualizado
         pip install -r requirements.txt
 
     - name: Executando os testes web
       run: |
+        source venv/bin/activate  # Ativar novamente o ambiente virtual
         robot --outputdir results/ .
 
     - name: Test Repost
