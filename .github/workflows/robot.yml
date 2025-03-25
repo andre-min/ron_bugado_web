@@ -11,6 +11,11 @@ jobs:
     - name: Clonar arquivos do repositório
       uses: actions/checkout@v4
 
+    - name: Criar arquivo .env temporário
+      run: | 
+        echo "MAIL=${{ secrets.MAIL }}" >> .env
+        echo "PASSWORD=${{ secrets.PASSWORD }}" >> .env
+
     - name: Configurar Python
       uses: actions/setup-python@v5
       with:
@@ -20,12 +25,12 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
-        pip install --upgrade pip  # Garantir que o pip esteja atualizado
+        pip install --upgrade pip 
         pip install -r requirements.txt
 
     - name: Executando os testes web
       run: |
-        source venv/bin/activate  # Ativar novamente o ambiente virtual
+        source venv/bin/activate
         robot --outputdir results/ .
 
     - name: Test Repost
