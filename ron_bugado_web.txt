@@ -1,19 +1,19 @@
 .
+├── env.example
 ├── load_env.py
 ├── log
-│   ├── log.html
-│   ├── output.xml
-│   └── report.html
 ├── __pycache__
 │   ├── load_env.cpython-312.pyc
 │   └── mylib.cpython-312.pyc
-├── requeriments.txt
+├── README.md
+├── requirements.txt
 ├── resources
 │   ├── keyword.resource
 │   ├── libs
 │   └── variables.resource
 ├── ron_bugado_web.txt
 ├── tests
+│   ├── cadastro_entidades.robot
 │   └── login.robot
 └── venv
     ├── bin
@@ -23,5 +23,4 @@
     └── pyvenv.cfg
 
 11 directories, 12 files
-
-#tree -L 2 > ron_bugado_web.txt
+tree -L 2 > ron_bugado_web.txt
